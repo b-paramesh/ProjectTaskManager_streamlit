@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# 📝 Task Management CLI
+# 📝 ProjectTaskManager_Streamlit
 
-A **Command-Line Interface (CLI) Task Management System** built with Python and Supabase.  
-Manage users, tasks, and assignments from your terminal.
+A **Task Management System** built with Python, Supabase, and Streamlit.  
+Manage users, tasks, and assignments through both **CLI** and **web interface**.
 
 ---
 
@@ -24,12 +23,17 @@ Manage users, tasks, and assignments from your terminal.
 ### **Filter Tasks**
 - 🔍 Filter tasks by `user_id`, `status`, or `deadline`
 
+### **Web Interface**
+- 🌐 Streamlit dashboard for easier task and user management
+- 📊 Visualize task status and assignments
+
 ---
 
 ## 🛠 Tech Stack
 
 - Python 3.x
 - Supabase (PostgreSQL backend)
+- Streamlit for web interface
 - `python-dotenv` for environment variables
 
 ---
@@ -38,10 +42,6 @@ Manage users, tasks, and assignments from your terminal.
 
 1. **Clone the repository**
 ```bash
-git clone <your_repo_url>
-cd projectTaskManager
-
-2. Create and activate a virtual environment
 
 python -m venv venv
 # Windows
@@ -49,38 +49,43 @@ venv\Scripts\activate
 # Linux / Mac
 source venv/bin/activate
 
-3. Install dependencies
-
 pip install -r requirements.txt
-
-4. Setup environment variables
-
-Create a .env file in the root:
 
 SUPABASE_URL="https://your-supabase-url.supabase.co"
 SUPABASE_KEY="your-supabase-api-key"
 
-5. Run the CLI
-
 python -m cli.main
 
+streamlit run app.py
 
-| Action                 | Inputs                                                                                                             | Predicted Output                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Add User**           | Username: paramesh<br>Email: [bhupathiparamesh@gmail.com](mailto:bhupathiparamesh@gmail.com)<br>Password: paramesh | ✅ User added successfully!                                     |
-| **Edit User**          | User ID: 1<br>Field: username<br>New value: param                                                                  | ✅ User updated successfully!                                   |
-| **Delete User**        | User ID: 1                                                                                                         | ✅ User deleted successfully!                                   |
-| **Add Task**           | Title: study<br>Description: exam study<br>Deadline: 2025-09-24                                                    | ✅ Task added successfully!                                     |
-| **Edit Task**          | Task ID: 1<br>Field: title<br>New value: study harder                                                              | ✅ Task updated successfully!                                   |
-| **Delete Task**        | Task ID: 1                                                                                                         | ✅ Task deleted successfully!                                   |
-| **Assign Task**        | Task ID: 1<br>User ID: 1                                                                                           | ✅ Task assigned successfully!                                  |
-| **Update Task Status** | Task ID: 1<br>Status: completed                                                                                    | ✅ Task status updated successfully!                            |
-| **List Tasks**         | Filter: status<br>Value: completed                                                                                 | `{'task_id': 1, 'title': 'study', 'status': 'completed', ...}` |
+📋 Example Actions (CLI)
+Action	Inputs	Predicted Output
+Add User	Username: paramesh
+Email: bhupathiparamesh@gmail.com
 
+Password: paramesh	✅ User added successfully!
+Edit User	User ID: 1
+Field: username
+New value: param	✅ User updated successfully!
+Delete User	User ID: 1	✅ User deleted successfully!
+Add Task	Title: study
+Description: exam study
+Deadline: 2025-09-24	✅ Task added successfully!
+Edit Task	Task ID: 1
+Field: title
+New value: study harder	✅ Task updated successfully!
+Delete Task	Task ID: 1	✅ Task deleted successfully!
+Assign Task	Task ID: 1
+User ID: 1	✅ Task assigned successfully!
+Update Task Status	Task ID: 1
+Status: completed	✅ Task status updated successfully!
+List Tasks	Filter: status
+Value: completed	{'task_id': 1, 'title': 'study', 'status': 'completed', ...}
 
-projectTaskManager/
+📂 Project Structure
+ProjectTaskManager_streamlit/
 │
-├─ cli/                 # Main CLI entry point
+├─ cli/                 # CLI interface
 │   └─ main.py
 ├─ service/             # Business logic
 │   ├─ user_service.py
@@ -90,6 +95,7 @@ projectTaskManager/
 │   ├─ user_dao.py
 │   ├─ task_dao.py
 │   └─ assignment_dao.py
+├─ app.py               # Streamlit application
 ├─ venv/                # Python virtual environment
 ├─ requirements.txt
 └─ README.md
@@ -98,10 +104,6 @@ projectTaskManager/
 
 🔐 Add user authentication (login/logout)
 
-🌐 Integrate Streamlit UI for a web-based interface
-
 ✉️ Email notifications for task deadlines
-=======
-# ProjectTaskManager_streamlit
-TaskManager
->>>>>>> e623f2a93fddfe55353f5d3c3495463494e44391
+
+📈 Enhanced dashboards and charts in Streamlit
