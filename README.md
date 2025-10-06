@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📝 Task Management CLI
 
 A **Command-Line Interface (CLI) Task Management System** built with Python and Supabase.  
@@ -100,3 +101,7 @@ projectTaskManager/
 🌐 Integrate Streamlit UI for a web-based interface
 
 ✉️ Email notifications for task deadlines
+=======
+# ProjectTaskManager_streamlit
+TaskManager
+>>>>>>> e623f2a93fddfe55353f5d3c3495463494e44391
